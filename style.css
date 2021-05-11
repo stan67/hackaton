@@ -42,6 +42,13 @@ p {
     text-shadow: 1px 1px 20px #fe9246;
 }
 
+/* -------------
+    PRENSENTATION
+------------- */
+.uk-section.uk-light.uk-background-cover {
+    background: #070707;
+}
+
 
 /* -------------
     TIMELINE
