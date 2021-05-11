@@ -1,3 +1,29 @@
+<?php
+$url = 'https://api.spacexdata.com/v3/missions';
+
+
+$raw = file_get_contents($url);
+
+
+$json = json_decode($raw);
+
+$navettesMission3 = $json[3]->payload_ids;
+$nameMissions3 = $json[3]->mission_name;
+$wikipediaLiens3 = $json[3]->wikipedia;
+$description3 = $json[3]->description;
+$website3 = $json[3]->website;
+$navettesMission2 = $json[2]->payload_ids;
+$nameMissions2 = $json[2]->mission_name;
+$wikipediaLiens2 = $json[2]->wikipedia;
+$description2 = $json[2]->description;
+$website2 = $json[2]->website;
+$navettesMission7 = $json[7]->payload_ids;
+$nameMissions7 = $json[7]->mission_name;
+$wikipediaLiens7 = $json[7]->wikipedia;
+$description7 = $json[7]->description;
+$website7 = $json[7]->website;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -99,6 +125,17 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-08">July 8</time></h3>
+                                        <h2>Nom de mission : <?php echo $nameMissions3; ?></h2>
+                                        <?php echo $description3 ?>
+                                        <?php
+                                        echo '<h3> Navettes utilisées : </h3>';
+                                        foreach ($navettesMission3 as $key => $navettes)
+                                        {
+                                            echo '<li>'. $navettes .' - '.'</li>';
+                                        }
+                                        ?>
+                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website3; ?></a>
+                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens3; ?></a>
                                         <span class="uk-label uk-label-success uk-margin-auto-left">Feature</span>
                                     </div>
                                 </div>
@@ -117,6 +154,17 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-07">July 7</time></h3>
+                                        <h2>Nom de mission : <?php echo $nameMissions2; ?></h2>
+                                        <?php echo $description2 ?>
+                                        <?php
+                                        echo '<h3> Navettes utilisées : </h3>';
+                                        foreach ($navettesMission2 as $key => $navettes)
+                                        {
+                                            echo '<li>'. $navettes .' - '.'</li>';
+                                        }
+                                        ?>
+                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website2; ?></a>
+                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens2; ?></a>
                                         <span class="uk-label uk-label-success uk-margin-auto-left">Test</span>
                                     </div>
                                 </div>
@@ -137,6 +185,17 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-06">July 6</time></h3>
+                                        <h2>Nom de mission : <?php echo $nameMissions7; ?></h2>
+                                        <?php echo $description7 ?>
+                                        <?php
+                                        echo '<h3> Navettes utilisées : </h3>';
+                                        foreach ($navettesMission7 as $key => $navettes)
+                                        {
+                                            echo '<li>'. $navettes .' - '.'</li>';
+                                        }
+                                        ?>
+                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website7; ?></a>
+                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens7; ?></a>
                                         <span class="uk-label uk-label-success uk-margin-auto-left">Fix</span>
                                     </div>
                                 </div>
