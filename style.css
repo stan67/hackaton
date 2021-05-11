@@ -10,11 +10,12 @@ html {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 65px;
 }
 
 p {
     color: #b7b7b7;
+    margin-bottom: 0;
 }
 
 
@@ -42,11 +43,19 @@ p {
     text-shadow: 1px 1px 20px #fe9246;
 }
 
+.uk-countdown-number {
+    font-size: 5rem;
+}
+
 /* -------------
     PRENSENTATION
 ------------- */
 .uk-section.uk-light.uk-background-cover {
     background: #070707;
+}
+
+img.spacex.uk-first-column {
+    width: 350px;
 }
 
 
@@ -97,10 +106,10 @@ p {
     color: #a9a9a9;
 }
 .uk-card-default .uk-card-header {
-    border-bottom: 1px solid #0e0e0e;
+    border-bottom: none!important;
 }
 .uk-timeline {
-    padding: 30px;
+    padding: 10px;
 }
 h3.uk-card-title.uk-first-column {
     font-size: 27px;
@@ -117,6 +126,101 @@ svg {
 .uk-card-default {
     background: transparent;
 }
+
+
+/* -------------
+    SLIDER
+------------- */
+#navette-1 {
+    background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
+                  url("images/navette-2.png");
+}
+
+#navette-2 {
+    background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
+                  url("images/navette-1.png");
+}
+
+#navette-3 {
+    background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
+                  url("images/navette-3.png");
+}
+.title-h2 {
+    color: black!important;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.p-slider {
+    color: black;
+}
+
+
+/* -------------
+    SLIDER
+------------- */
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-size:4em;
+  font-weight: 600;
+  text-align:center;
+  color:white;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+
+/* -------------
+    FOOTER
+------------- */
+#videoDiv2 {width:100%; max-width:1200px; margin:auto; display:block; position: relative;} /* This has been changed */
+#video2{width:100%; height:auto } /* This has been changed */
+#videoMessage2 { position: absolute; top: 0; left: 0;
+display: flex;
+flex-direction: column; 
+justify-content: center;
+align-items: center; 
+width: 100%;
+height: 100%;}
+
+div#videoMessage2 img {
+    width: 900px;
+    position: absolute;
+    bottom: 0;
+}
+div#videoMessage2 h2 {
+    position: absolute;
+    top: 130px;
+    color: white;
+}
+
+div#videoMessage2 h1 {
+    position: absolute;
+    top: 60px;
+    color: white;
+}
+
+.console-container {
+    position: absolute;
+    top: 55px;
+}
+
+.min-footer {
+    background: black;
+}
+
+.min-footer {
+    padding: 20px;
+    text-align: center;
+}
+
 
 
 
