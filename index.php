@@ -99,7 +99,7 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-08">July 8</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Feature</span>
+                                        <span class="uk-label uk-label-success uk-margin-auto-left">Projet #1</span>
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
@@ -117,7 +117,7 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-07">July 7</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Test</span>
+                                        <span class="uk-label uk-label-success uk-margin-auto-left">Projet #2</span>
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
@@ -137,7 +137,7 @@
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                                         <h3 class="uk-card-title"><time datetime="2020-07-06">July 6</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Fix</span>
+                                        <span class="uk-label uk-label-success uk-margin-auto-left">Projet #3</span>
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
@@ -174,8 +174,7 @@
                     </div>
                 </li>
             </ul>
-            <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            
             </div>
             
 
