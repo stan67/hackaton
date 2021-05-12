@@ -102,7 +102,7 @@ $website7 = $json[7]->website;
                         <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
                             <img src="images/spacex.png" class="spacex" alt="" uk-scrollspy="cls: uk-animation-fade; delay: 1200">
                             <div>
-                                <p uk-scrollspy="cls: uk-animation-fade; delay: 1500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                <p uk-scrollspy="cls: uk-animation-fade; delay: 1500">Elon Musk, né le 28 juin 1971 à Pretoria, est un ingénieur, entrepreneur, chef d'entreprise</p>
                             </div>
                         </div>
 
@@ -124,23 +124,24 @@ $website7 = $json[7]->website;
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-08">July 8</time></h3>
-                                        <h2>Nom de mission : <?php echo $nameMissions3; ?></h2>
-                                        <?php echo $description3 ?>
-                                        <?php
-                                        echo '<h3> Navettes utilisées : </h3>';
-                                        foreach ($navettesMission3 as $key => $navettes)
-                                        {
-                                            echo '<li>'. $navettes .' - '.'</li>';
-                                        }
-                                        ?>
-                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website3; ?></a>
-                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens3; ?></a>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Feature</span>
+                                        <h3 class="uk-card-title"><time datetime="2020-07-08">July 8 : <?php echo $nameMissions3; ?></time></h3>
+                                        <div class="marge">
+                                            <p class="description"><?php echo $description3 ?></p>
+                                            <h3>Navettes utilisées : </h3>
+                                            <?php
+                                            echo '';
+                                            foreach ($navettesMission3 as $key => $navettes)
+                                            {
+                                                echo $navettes .' - ';
+                                            }
+                                            ?>
+                                            <p>Pour plus d'information rendez vous sur le site : </p>
+                                            <ul>
+                                                <li><a href='https://www.spacex.com' class="link"><?php echo $website7; ?></a></li>
+                                                <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link"><?php echo $wikipediaLiens7; ?></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Fully responsive timeline you can add to your UIkit 3 project</p>
                                 </div>
                             </div>
                         </div>
@@ -153,25 +154,24 @@ $website7 = $json[7]->website;
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-07">July 7</time></h3>
-                                        <h2>Nom de mission : <?php echo $nameMissions2; ?></h2>
-                                        <?php echo $description2 ?>
+                                    
+                                        <h3 class="uk-card-title"><time datetime="2020-07-07">July 7 : <?php echo $nameMissions2; ?></time></h3>
+                                        <div class="marge">
+                                        <p class="description"><?php echo $description2 ?></p>
+                                        <h3> Navettes utilisées : </h3>
                                         <?php
-                                        echo '<h3> Navettes utilisées : </h3>';
                                         foreach ($navettesMission2 as $key => $navettes)
                                         {
-                                            echo '<li>'. $navettes .' - '.'</li>';
+                                            echo $navettes .' - ';
                                         }
                                         ?>
-                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website2; ?></a>
-                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens2; ?></a>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Test</span>
+                                        <p>Pour plus d'information rendez vous sur le site : </p>
+                                        <ul>
+                                            <li><a href='https://www.spacex.com' class="link"><?php echo $website7; ?></a></li>
+                                            <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link"><?php echo $wikipediaLiens7; ?></a></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -184,23 +184,23 @@ $website7 = $json[7]->website;
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-06">July 6</time></h3>
-                                        <h2>Nom de mission : <?php echo $nameMissions7; ?></h2>
-                                        <?php echo $description7 ?>
-                                        <?php
-                                        echo '<h3> Navettes utilisées : </h3>';
-                                        foreach ($navettesMission7 as $key => $navettes)
-                                        {
-                                            echo '<li>'. $navettes .' - '.'</li>';
-                                        }
-                                        ?>
-                                        Pour plus d'information rendez vous sur le site : <a href='https://www.spacex.com'><?php echo $website7; ?></a>
-                                        ou : <a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX'><?php echo $wikipediaLiens7; ?></a>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Fix</span>
+                                            <h3 class="uk-card-title"><time datetime="2020-07-06">July 6 : <?php echo $nameMissions7; ?></time></h3>
+                                            <div class="marge">
+                                            <p class="description"><?php echo $description7 ?></p>
+                                            <h3>Navettes utilisées : </h3>
+                                            <?php
+                                            foreach ($navettesMission7 as $key => $navettes)
+                                            {
+                                                echo $navettes .' - ';
+                                            }
+                                            ?>
+                                            <p>Pour plus d'information rendez vous sur le site : </p>
+                                            <ul>
+                                                <li><a href='https://www.spacex.com' class="link"><?php echo $website7; ?></a></li>
+                                                <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link"><?php echo $wikipediaLiens7; ?></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                                 </div>
                             </div>
                         </div>
@@ -216,20 +216,20 @@ $website7 = $json[7]->website;
             <ul class="uk-slideshow-items">
                 <li id="navette-1">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Iridium NEXT 7</h2>
+                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
                     </div>
                 </li>
                 <li id="navette-2">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">COTS Demo Flight 1 </h2>
+                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
                     </div>
                 </li>
                 <li id="navette-3">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0" class="title-h2">Orbcomm-OG2-M1 </h2>
+                        <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
                     </div>
                 </li>
             </ul>

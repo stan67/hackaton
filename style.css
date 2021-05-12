@@ -40,7 +40,6 @@ p {
 .uk-grid-column-small, .uk-grid-small {
     margin-bottom: 85px;
     margin-left: 0;
-    text-shadow: 1px 1px 20px #fe9246;
 }
 
 .uk-countdown-number {
@@ -113,6 +112,7 @@ img.spacex.uk-first-column {
 }
 h3.uk-card-title.uk-first-column {
     font-size: 27px;
+    text-shadow: 1px 1px 20px #fe9246;
 }
 .uk-label-success {
     background: #fe9246;
@@ -125,6 +125,49 @@ svg {
 
 .uk-card-default {
     background: transparent;
+}
+.uk-timeline .uk-timeline-item .uk-card {
+    max-height: 900px;
+}
+h3.uk-grid-margin.uk-first-column {
+    text-shadow: 1px 1px 20px #fe9246;
+    color: #a9a9a9;
+}
+
+.link {
+    color: #fe9246;
+}
+
+ul {
+    list-style: none;
+}
+*+.uk-grid-margin-small, .uk-grid+.uk-grid-row-small, .uk-grid+.uk-grid-small, .uk-grid-row-small>.uk-grid-margin, .uk-grid-small>.uk-grid-margin {
+    margin-top: 7px;
+}
+
+.description {
+    color: #666;
+}
+
+p.uk-grid-margin.uk-first-column {
+    line-height: 1.8;
+}
+
+.marge {
+    margin-top: 30px;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
+.uk-h3, h3 {
+    text-shadow: 1px 1px 20px #fe9246;
+    color: #a9a9a9;
+}
+
+.uk-link, a {
+    color: #fe9246!important;
 }
 
 
