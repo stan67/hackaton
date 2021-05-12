@@ -40,6 +40,7 @@ $website7 = $json[7]->website;
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="uk-position-top">
     <!----------------
         HEADER 
@@ -53,13 +54,13 @@ $website7 = $json[7]->website;
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav"> 
-                <li class="uk-active"><a href="#">Accueil</a></li>
-                    <li><a href="#historique">Historique</a></li>
+                <li class="uk-active"><a href="#" uk-scroll>Accueil</a></li>
+                    <li><a href="#historique" uk-scroll>Historique</a></li>
                     <li>
-                        <a href="#fusee">Les fusées</a>
+                        <a href="#fusee" uk-scroll>Les fusées</a>
                     </li>
                     <li>
-                        <a href="#bisous">Bisous</a>
+                        <a href="#bisous" uk-scroll>Bisous</a>
                     </li>
                 </ul>
             </div>
