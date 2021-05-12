@@ -28,12 +28,12 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav"> 
                 <li class="uk-active"><a href="#">Accueil</a></li>
-                    <li><a href="#">Historique</a></li>
+                    <li><a href="#historique">Historique</a></li>
                     <li>
-                        <a href="#">Les robots</a>
+                        <a href="#fusee">Les fusées</a>
                     </li>
                     <li>
-                        <a href="#">Les fusées</a>
+                        <a href="#bisous">Bisous</a>
                     </li>
                 </ul>
             </div>
@@ -88,7 +88,7 @@
                 HISTORIQUE 
             ------------------>
             <!-- Timeline -->
-            <div class="uk-container uk-padding" uk-parallax="bgy: 700" style="background: url('images/planet.png') no-repeat; background-size: 40%; background-position: right" uk-scrollspy="cls: uk-animation-fade; delay: 1800">
+            <div id="historique" class="uk-container uk-padding" uk-parallax="bgy: 700" style="background: url('images/planet.png') no-repeat; background-size: 40%; background-position: right" uk-scrollspy="cls: uk-animation-fade; delay: 1800">
                 <div class="uk-timeline" uk-parallax="bgy: 700" style="background: url('images/planet-2.png') no-repeat; background-size: 12%; background-position: right 35% top 70%;">
                     <div class="uk-timeline-item" uk-scrollspy="uk-animation-slide-bottom">
                         <div class="uk-timeline-icon">
@@ -154,7 +154,7 @@
             <!----------------
                 SLIDESHOW 
             ------------------>
-            <ul class="uk-slideshow-items">
+            <ul id="fusee" class="uk-slideshow-items">
                 <li id="navette-1">
                     <div class="uk-position-center uk-position-small uk-text-center">
                         <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Heading</h2>
@@ -174,23 +174,29 @@
                     </div>
                 </li>
             </ul>
-            
+            <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
             </div>
             
+            <!----------------
+                MERCI 
+            ------------------>
+            <div id="videoDiv2" id="bisous"> 
+                <video src="videos/rocket.mp4" loop muted playsinline uk-video="autoplay: inview">
+                </video> 
+                <div id="videoMessage2" class="styling">
+                    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+                    <h2>Team Space Monkeys</h2>
+                    <img src="images/team.png" alt="">
+                </div>
+            </div>
 
-<div id="videoDiv2"> 
-    <video src="videos/rocket.mp4" loop muted playsinline uk-video="autoplay: inview">
-    </video> 
-    <div id="videoMessage2" class="styling">
-        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-        <h2>Team Space Monkeys</h2>
-        <img src="images/team.png" alt="">
-    </div>
-</div>
-
-<div class="min-footer">
-    <p><span uk-icon="icon: bolt"></span>Propulsé par :    <span style="font-weight: 600">Bastien, Stan, Martin, Didor, Zach et le Capitaine</span></p>
-</div>
+            <!----------------
+                MIN FOOTER 
+            ------------------>
+            <div class="min-footer">
+                <p><span uk-icon="icon: bolt"></span>Propulsé par :    <span style="font-weight: 600">Bastien, Stan, Martin, Didor, Zach et le Capitaine</span></p>
+            </div>
 
     <!-- SCRIPTS -->
     <script src="js/uikit.min.js"></script>
