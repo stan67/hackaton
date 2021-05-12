@@ -199,6 +199,7 @@ ol, ul {
 
 .p-slider {
     color: black;
+    margin-bottom: 9px;
 }
 
 
@@ -267,6 +268,11 @@ div#videoMessage2 h1 {
 .min-footer {
     padding: 20px;
     text-align: center;
+}
+
+a.capitaine {
+    color: black!important;
+    font-weight: 900;
 }
 
 

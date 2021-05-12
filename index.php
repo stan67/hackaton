@@ -218,6 +218,9 @@ $website7 = $json[7]->website;
                     <div class="uk-position-center uk-position-small uk-text-center">
                         <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Iridium NEXT 7</h2>
                         <p uk-slideshow-parallax="x: 200,-200" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
+                        <div uk-lightbox>
+                            <a class="capitaine" href="images/capitaine.jpg">Clique pas ici</a>
+                        </div>
                     </div>
                 </li>
                 <li id="navette-2">
