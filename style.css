@@ -40,7 +40,6 @@ p {
 .uk-grid-column-small, .uk-grid-small {
     margin-bottom: 85px;
     margin-left: 0;
-    text-shadow: 1px 1px 20px #fe9246;
 }
 
 .uk-countdown-number {
@@ -113,6 +112,7 @@ img.spacex.uk-first-column {
 }
 h3.uk-card-title.uk-first-column {
     font-size: 27px;
+    text-shadow: 1px 1px 20px #fe9246;
 }
 .uk-label-success {
     background: #fe9246;
@@ -126,6 +126,49 @@ svg {
 .uk-card-default {
     background: transparent;
 }
+.uk-timeline .uk-timeline-item .uk-card {
+    max-height: 900px;
+}
+h3.uk-grid-margin.uk-first-column {
+    text-shadow: 1px 1px 20px #fe9246;
+    color: #a9a9a9;
+}
+
+.link {
+    color: #fe9246;
+}
+
+ul {
+    list-style: none;
+}
+*+.uk-grid-margin-small, .uk-grid+.uk-grid-row-small, .uk-grid+.uk-grid-small, .uk-grid-row-small>.uk-grid-margin, .uk-grid-small>.uk-grid-margin {
+    margin-top: 7px;
+}
+
+.description {
+    color: #666;
+}
+
+p.uk-grid-margin.uk-first-column {
+    line-height: 1.8;
+}
+
+.marge {
+    margin-top: 30px;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
+.uk-h3, h3 {
+    text-shadow: 1px 1px 20px #fe9246;
+    color: #a9a9a9;
+}
+
+.uk-link, a {
+    color: #fe9246!important;
+}
 
 
 /* -------------
@@ -134,16 +177,19 @@ svg {
 #navette-1 {
     background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
                   url("images/navette-2.png");
+    background-size: 100%;
 }
 
 #navette-2 {
     background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
                   url("images/navette-1.png");
+    background-size: 100%;
 }
 
 #navette-3 {
     background-image: linear-gradient(257deg, rgb(255 105 0 / 60%) 0%, rgb(255 79 0 / 60%) 100%),
                   url("images/navette-3.png");
+    background-size: 100%;
 }
 .title-h2 {
     color: black!important;
@@ -153,6 +199,7 @@ svg {
 
 .p-slider {
     color: black;
+    margin-bottom: 9px;
 }
 
 
@@ -180,8 +227,6 @@ svg {
 /* -------------
     FOOTER
 ------------- */
-#videoDiv2 {width:100%; max-width:1200px; margin:auto; display:block; position: relative;} /* This has been changed */
-#video2{width:100%; height:auto } /* This has been changed */
 #videoMessage2 { position: absolute; top: 0; left: 0;
 display: flex;
 flex-direction: column; 
@@ -212,6 +257,10 @@ div#videoMessage2 h1 {
     top: 55px;
 }
 
+.uk-height-large {
+    height: 600px;
+}
+
 .min-footer {
     background: black;
 }
@@ -219,6 +268,11 @@ div#videoMessage2 h1 {
 .min-footer {
     padding: 20px;
     text-align: center;
+}
+
+a.capitaine {
+    color: black!important;
+    font-weight: 900;
 }
 
 

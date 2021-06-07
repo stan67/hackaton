@@ -1,3 +1,29 @@
+<?php
+$url = 'https://api.spacexdata.com/v3/missions';
+
+
+$raw = file_get_contents($url);
+
+
+$json = json_decode($raw);
+
+$navettesMission3 = $json[3]->payload_ids;
+$nameMissions3 = $json[3]->mission_name;
+$wikipediaLiens3 = $json[3]->wikipedia;
+$description3 = $json[3]->description;
+$website3 = $json[3]->website;
+$navettesMission2 = $json[2]->payload_ids;
+$nameMissions2 = $json[2]->mission_name;
+$wikipediaLiens2 = $json[2]->wikipedia;
+$description2 = $json[2]->description;
+$website2 = $json[2]->website;
+$navettesMission7 = $json[7]->payload_ids;
+$nameMissions7 = $json[7]->mission_name;
+$wikipediaLiens7 = $json[7]->wikipedia;
+$description7 = $json[7]->description;
+$website7 = $json[7]->website;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,6 +40,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="uk-position-top">
     <!----------------
         HEADER 
@@ -27,13 +54,13 @@
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav"> 
-                <li class="uk-active"><a href="#">Accueil</a></li>
-                    <li><a href="#">Historique</a></li>
+                <li class="uk-active"><a href="#" uk-scroll>Accueil</a></li>
+                    <li><a href="#historique" uk-scroll>Historique</a></li>
                     <li>
-                        <a href="#">Les robots</a>
+                        <a href="#fusee" uk-scroll>Les fusées</a>
                     </li>
                     <li>
-                        <a href="#">Les fusées</a>
+                        <a href="#bisous" uk-scroll>Bisous</a>
                     </li>
                 </ul>
             </div>
@@ -76,7 +103,7 @@
                         <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
                             <img src="images/spacex.png" class="spacex" alt="" uk-scrollspy="cls: uk-animation-fade; delay: 1200">
                             <div>
-                                <p uk-scrollspy="cls: uk-animation-fade; delay: 1500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                <p uk-scrollspy="cls: uk-animation-fade; delay: 1500">Elon Musk, né le 28 juin 1971 à Pretoria, est un ingénieur, entrepreneur, chef d'entreprise</p>
                             </div>
                         </div>
 
@@ -88,7 +115,7 @@
                 HISTORIQUE 
             ------------------>
             <!-- Timeline -->
-            <div class="uk-container uk-padding" uk-parallax="bgy: 700" style="background: url('images/planet.png') no-repeat; background-size: 40%; background-position: right" uk-scrollspy="cls: uk-animation-fade; delay: 1800">
+            <div id="historique" class="uk-container uk-padding" uk-parallax="bgy: 700" style="background: url('images/planet.png') no-repeat; background-size: 40%; background-position: right" uk-scrollspy="cls: uk-animation-fade; delay: 1800">
                 <div class="uk-timeline" uk-parallax="bgy: 700" style="background: url('images/planet-2.png') no-repeat; background-size: 12%; background-position: right 35% top 70%;">
                     <div class="uk-timeline-item" uk-scrollspy="uk-animation-slide-bottom">
                         <div class="uk-timeline-icon">
@@ -98,12 +125,24 @@
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-08">July 8</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Feature</span>
+                                        <h3 class="uk-card-title"><time datetime="2020-07-08">July 8 : <?php echo $nameMissions3; ?></time></h3>
+                                        <div class="marge">
+                                            <p class="description"><?php echo $description3 ?></p>
+                                            <h3>Navettes utilisées : </h3>
+                                            <?php
+                                            echo '';
+                                            foreach ($navettesMission3 as $key => $navettes)
+                                            {
+                                                echo $navettes .' - ';
+                                            }
+                                            ?>
+                                            <p>Pour plus d'information rendez vous sur le site : </p>
+                                            <ul>
+                                                <li><a href='https://www.spacex.com' class="link" target="_blank"><?php echo $website7; ?></a></li>
+                                                <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link" target="_blank"><?php echo $wikipediaLiens7; ?></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Fully responsive timeline you can add to your UIkit 3 project</p>
                                 </div>
                             </div>
                         </div>
@@ -116,14 +155,24 @@
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-07">July 7</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Test</span>
+                                    
+                                        <h3 class="uk-card-title"><time datetime="2020-07-07">July 7 : <?php echo $nameMissions2; ?></time></h3>
+                                        <div class="marge">
+                                        <p class="description"><?php echo $description2 ?></p>
+                                        <h3> Navettes utilisées : </h3>
+                                        <?php
+                                        foreach ($navettesMission2 as $key => $navettes)
+                                        {
+                                            echo $navettes .' - ';
+                                        }
+                                        ?>
+                                        <p>Pour plus d'information rendez vous sur le site : </p>
+                                        <ul>
+                                            <li><a href='https://www.spacex.com' class="link" target="_blank"><?php echo $website7; ?></a></li>
+                                            <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link" target="_blank"><?php echo $wikipediaLiens7; ?></a></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,12 +185,23 @@
                             <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
                                 <div class="uk-card-header">
                                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                        <h3 class="uk-card-title"><time datetime="2020-07-06">July 6</time></h3>
-                                        <span class="uk-label uk-label-success uk-margin-auto-left">Fix</span>
+                                            <h3 class="uk-card-title"><time datetime="2020-07-06">July 6 : <?php echo $nameMissions7; ?></time></h3>
+                                            <div class="marge">
+                                            <p class="description"><?php echo $description7 ?></p>
+                                            <h3>Navettes utilisées : </h3>
+                                            <?php
+                                            foreach ($navettesMission7 as $key => $navettes)
+                                            {
+                                                echo $navettes .' - ';
+                                            }
+                                            ?>
+                                            <p>Pour plus d'information rendez vous sur le site : </p>
+                                            <ul>
+                                                <li><a href='https://www.spacex.com' class="link" target="_blank"><?php echo $website7; ?></a></li>
+                                                <li><a href='https://en.wikipedia.org/wiki/Commercial_Resupply_Services#SpaceX' class="link" target="_blank"><?php echo $wikipediaLiens7; ?></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                                 </div>
                             </div>
                         </div>
@@ -154,23 +214,26 @@
             <!----------------
                 SLIDESHOW 
             ------------------>
-            <ul class="uk-slideshow-items">
+            <ul id="fusee" class="uk-slideshow-items">
                 <li id="navette-1">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Iridium NEXT 7</h2>
+                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
+                        <div uk-lightbox>
+                            <a class="capitaine" href="images/capitaine.jpg">Clique pas ici</a>
+                        </div>
                     </div>
                 </li>
                 <li id="navette-2">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="x: 100,-100" class="title-h2">COTS Demo Flight 1 </h2>
+                        <p uk-slideshow-parallax="x: 200,-200" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
                     </div>
                 </li>
                 <li id="navette-3">
                     <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0" class="title-h2">Heading</h2>
-                        <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0" class="p-slider">Lorem ipsum dolor sit amet.</p>
+                        <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0" class="title-h2">Orbcomm-OG2-M1 </h2>
+                        <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0" class="p-slider">This is for use by air traffic control and, via FlightAware</p>
                     </div>
                 </li>
             </ul>
@@ -178,10 +241,8 @@
     <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
             </div>
             
-
-<div id="videoDiv2"> 
-    <video src="videos/rocket.mp4" loop muted playsinline uk-video="autoplay: inview">
-    </video> 
+<div id="bisous" class="uk-cover-container uk-height-large" id="videoDiv2" uk-scrollspy="cls: uk-animation-fade; delay: 800">
+    <video src="videos/rocket.mp4" autoplay loop muted playsinline uk-cover></video>
     <div id="videoMessage2" class="styling">
         <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
         <h2>Team Space Monkeys</h2>
@@ -189,7 +250,8 @@
     </div>
 </div>
 
-<div class="min-footer">
+
+<div class="min-footer" uk-scrollspy="cls: uk-animation-fade; delay: 800">
     <p><span uk-icon="icon: bolt"></span>Propulsé par :    <span style="font-weight: 600">Bastien, Stan, Martin, Didor, Zach et le Capitaine</span></p>
 </div>
 
